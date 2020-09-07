@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -6,6 +7,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Your name:");
             string name = Console.ReadLine();
             Console.WriteLine("Your age:");
@@ -84,7 +86,47 @@ namespace HelloWorld
                 }
 
             }
+            */
 
+            List<Person> people = new List<Person>();
+
+            for(int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Persons name:");
+                string name = Console.ReadLine();
+                Console.WriteLine("Persons age:");
+                int age = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Persons life status: (Answer with \"Alive\" if it applies)");
+                string alive = Console.ReadLine();
+                if (alive.ToLower() == "alive")
+                {
+                    alive = "Living";
+                }
+                else
+                {
+                    alive = "Dead";
+                }
+
+                people.Add(new Person(name, age, alive));
+            }
+
+            people.Reverse();
+            
+            people.ForEach(delegate (Person p)
+            { Console.WriteLine(String.Format("{0} {1} {2}", p.name, p.age, p.alive)); }); 
         }
-    }
+
+        public class Person
+        {
+            public string name;
+            public int age;
+            public string alive;
+            public Person(string name, int age, string alive)
+            {
+                this.name = name;
+                this.age = age;
+                this.alive = alive;
+            }
+        }
+}
 }
