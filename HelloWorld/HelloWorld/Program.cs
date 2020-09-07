@@ -10,7 +10,7 @@ namespace HelloWorld
             string name = Console.ReadLine();
             Console.WriteLine("Your age:");
             int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Are you alive? (Answer with a \"yes\" if this is true");
+            Console.WriteLine("Are you alive? (Answer with a \"yes\" if this is true)");
             string alive = Console.ReadLine();
             bool lifeStatus;
 
@@ -33,6 +33,57 @@ namespace HelloWorld
             }
 
             Console.WriteLine('\n' + "Name: " + name + '\n' + "Age: " + age + '\n' + "Life Status: " + alive);
+
+            Console.WriteLine("Do you want to keep running this program? Answer \"yes\" is so");
+
+            string keepGoing = Console.ReadLine();
+
+            switch (keepGoing.ToUpper())
+            {
+                case "YES":
+                    Console.Write("Loading");
+                    for(int i = 0; i < 2; i++)
+                    {
+                        System.Threading.Thread.Sleep(1000);
+                        Console.Write(" .");
+                        System.Threading.Thread.Sleep(1000);
+                        Console.Write(" .");
+                        System.Threading.Thread.Sleep(1000);
+                        Console.Write(" .");
+                    }
+                    break;
+
+                default:
+                    Environment.Exit(0);
+                    break;
+            }
+
+            int answer;
+            while (true)
+            {
+                Console.WriteLine("\nQuestion: \nWhat's 9 + 10?");
+                answer = Convert.ToInt32(Console.ReadLine());
+
+                if(answer == 21)
+                {
+                    Console.WriteLine("Congratulations, you won 3 gems");
+                    System.Threading.Thread.Sleep(1000);
+                    break;
+                }
+                else if(answer == 19)
+                {
+                    Console.WriteLine("Right, but no... \nGuess again");
+                    System.Threading.Thread.Sleep(1000);
+                    Console.WriteLine("dummy");
+                    System.Threading.Thread.Sleep(1000);
+                }
+                else
+                {
+                    Console.WriteLine("Wrong, guess again dummy");
+                    System.Threading.Thread.Sleep(1000);
+                }
+
+            }
 
         }
     }
