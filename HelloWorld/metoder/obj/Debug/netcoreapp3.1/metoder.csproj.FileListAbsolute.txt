@@ -1,0 +1,13 @@
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\bin\Debug\netcoreapp3.1\metoder.exe
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\bin\Debug\netcoreapp3.1\metoder.deps.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\bin\Debug\netcoreapp3.1\metoder.runtimeconfig.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\bin\Debug\netcoreapp3.1\metoder.runtimeconfig.dev.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\bin\Debug\netcoreapp3.1\metoder.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\bin\Debug\netcoreapp3.1\metoder.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.csprojAssemblyReference.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.AssemblyInfoInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.AssemblyInfo.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.csproj.CoreCompileInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\HelloWorld\metoder\obj\Debug\netcoreapp3.1\metoder.genruntimeconfig.cache

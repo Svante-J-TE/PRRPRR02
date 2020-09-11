@@ -86,7 +86,7 @@ namespace HelloWorld
                 }
 
             }
-            */
+            
 
             List<Person> people = new List<Person>();
 
@@ -114,6 +114,10 @@ namespace HelloWorld
             
             people.ForEach(delegate (Person p)
             { Console.WriteLine(String.Format("{0} {1} {2}", p.name, p.age, p.alive)); }); 
+
+            */
+
+
         }
 
         public class Person
