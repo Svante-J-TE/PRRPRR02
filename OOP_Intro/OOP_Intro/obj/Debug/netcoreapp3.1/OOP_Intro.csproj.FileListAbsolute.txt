@@ -1,0 +1,13 @@
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.exe
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.deps.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.runtimeconfig.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.runtimeconfig.dev.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.csprojAssemblyReference.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.AssemblyInfoInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.AssemblyInfo.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.csproj.CoreCompileInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.genruntimeconfig.cache
