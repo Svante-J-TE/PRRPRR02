@@ -1,0 +1,12 @@
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.exe
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.deps.json
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.runtimeconfig.json
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.runtimeconfig.dev.json
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.dll
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.pdb
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.AssemblyInfoInputs.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.AssemblyInfo.cs
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csproj.CoreCompileInputs.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.dll
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.pdb
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.genruntimeconfig.cache

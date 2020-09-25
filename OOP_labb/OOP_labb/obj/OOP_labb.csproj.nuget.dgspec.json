@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_Intro\\OOP_Intro\\OOP_Intro.csproj": {}
+    "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_Intro\\OOP_Intro\\OOP_Intro.csproj": {
+    "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_Intro\\OOP_Intro\\OOP_Intro.csproj",
-        "projectName": "OOP_Intro",
-        "projectPath": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_Intro\\OOP_Intro\\OOP_Intro.csproj",
+        "projectUniqueName": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
+        "projectName": "OOP_labb",
+        "projectPath": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
         "packagesPath": "C:\\Users\\Elev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_Intro\\OOP_Intro\\obj\\",
+        "outputPath": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Elev\\AppData\\Roaming\\NuGet\\NuGet.Config",
