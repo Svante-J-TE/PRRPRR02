@@ -10,3 +10,4 @@ C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.
 C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.dll
 C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.pdb
 C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.genruntimeconfig.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csprojAssemblyReference.cache
