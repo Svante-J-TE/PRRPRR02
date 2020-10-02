@@ -7,31 +7,28 @@ namespace OOP_labb
     class Customers
     {
         private string _userName;
+
+        public string _UserName
+        {
+            get { return _userName; }   
+            set { _userName = value; }  
+        }
+
         private int _userAge;
-        private string _adress;
-        private string _county;
-        private string _zipCode;
-        private string _email;
-        private string _phoneNumber;
-        private int[] _cart;
 
-        public Customers(string name, int age, string adress, string county, string zipCode, string email, string phoneNumber)
+        public int _UserAge
         {
-            this._userName = name;
-            this._userAge = age;
-            this._adress = adress;
-            this._county = county;
-            this._zipCode = zipCode;
-            this._email = email;
-            this._phoneNumber = phoneNumber;
+            get { return _userAge; }
+            set { _userAge = value; }
         }
 
-        /*
-        public int[] cart
+        public Customers(string name, int age)
         {
-            get { return _cart; }
-            set { _cart.add(value); }
+            _userName = name;
+            _userAge = age;
         }
-        */
+
+        
+
     }
 }

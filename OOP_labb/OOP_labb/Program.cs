@@ -5,6 +5,8 @@ namespace OOP_labb
 {
     class Program
     {
+        private static List<Customers> _customers = new List<Customers>();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -12,6 +14,7 @@ namespace OOP_labb
             List<Products> BevrageList = new List<Products>();
             List<Products> CondimentsList = new List<Products>();
             List<Products> SnackList = new List<Products>();
+            
 
 
             BreadList.Add(new Products("Bread", "Ciabatta", "White", 50, "bread_ciabatta_white"));
@@ -26,8 +29,34 @@ namespace OOP_labb
             SnackList.Add(new Products("Snack", "Chips", "Salted", 33, "snack_chips_salted"));
             SnackList.Add(new Products("Snack", "Corn", "Grilled", 22, "snack_corn_grilled"));
 
-            Customers svante = new Customers(Console.ReadLine, );
+            createCustomer();
+        }
 
+        static void createCustomer()
+        {
+            string name;
+            int age;
+            while (true)
+            {
+                Console.WriteLine("Write your name:");
+                name = Console.ReadLine();
+                if(name != null && name != "")
+                {
+                    break;
+                }
+            }
+            while (true)
+            {
+                Console.WriteLine("Write your age:");
+                age = 3;
+                if (age != null)
+                {
+                    break;
+                }
+            }
+            
+            _customers.Add(new Customers(name, age));
+            Console.WriteLine("Created Customer: " + _customers[0]._UserName + "\nAge: " +  _customers[0]._UserAge);
         }
     }
 }

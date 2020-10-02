@@ -11,3 +11,16 @@ C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\
 C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.dll
 C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.pdb
 C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.genruntimeconfig.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.exe
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.deps.json
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.runtimeconfig.json
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.runtimeconfig.dev.json
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.dll
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\bin\Debug\netcoreapp3.1\OOP_Intro.pdb
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.csprojAssemblyReference.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.AssemblyInfoInputs.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.AssemblyInfo.cs
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.csproj.CoreCompileInputs.cache
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.dll
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.pdb
+C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_Intro\OOP_Intro\obj\Debug\netcoreapp3.1\OOP_Intro.genruntimeconfig.cache
