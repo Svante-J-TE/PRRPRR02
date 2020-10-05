@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj": {}
+    "D:\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj": {
+    "D:\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
+        "projectUniqueName": "D:\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
         "projectName": "OOP_labb",
-        "projectPath": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
-        "packagesPath": "C:\\Users\\Elev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elev\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\obj\\",
+        "projectPath": "D:\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
+        "packagesPath": "C:\\Users\\svant\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Elev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\svant\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

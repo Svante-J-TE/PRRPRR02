@@ -11,3 +11,16 @@ C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.
 C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.pdb
 C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.genruntimeconfig.cache
 C:\Users\Elev\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csprojAssemblyReference.cache
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.exe
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.deps.json
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.runtimeconfig.json
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.runtimeconfig.dev.json
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.dll
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.pdb
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csprojAssemblyReference.cache
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.AssemblyInfoInputs.cache
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.AssemblyInfo.cs
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.dll
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.pdb
+D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.genruntimeconfig.cache

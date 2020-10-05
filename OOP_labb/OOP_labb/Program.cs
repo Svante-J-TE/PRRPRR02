@@ -7,6 +7,7 @@ namespace OOP_labb
     class Program
     {
         private static List<Customers> _customers = new List<Customers>();
+        private static List<Products> _cart = new List<Products>();
 
         static void Main(string[] args)
         {
@@ -15,19 +16,22 @@ namespace OOP_labb
             List<Products> CondimentsList = new List<Products>();
             List<Products> SnackList = new List<Products>();
             
+            
 
 
-            BreadList.Add(new Products("Bread", "Ciabatta", "White", 50, "bread_ciabatta_white"));
-            BreadList.Add(new Products("Bread", "Whole Wheat", "Lightbrown", 70, "bread_whole_wheat_lightbrown"));
+            BreadList.Add(new Products("Bread", "Ciabatta", "White", 50, 23));
+            BreadList.Add(new Products("Bread", "Whole Wheat", "Lightbrown", 70, 24));
 
-            BevrageList.Add(new Products("Bevrage", "Milk", "Organic", 20, "bevrage_milk_organic"));
-            BevrageList.Add(new Products("Bevrage", "Beer", "Lager", 90, "bevrage_beer_lager"));
+            BevrageList.Add(new Products("Bevrage", "Milk", "Organic", 20, 25));
+            BevrageList.Add(new Products("Bevrage", "Beer", "Lager", 90, 26));
 
-            CondimentsList.Add(new Products("Condiment", "Butter", "Whipped", 45, "condiment_butter_whipped"));
-            CondimentsList.Add(new Products("Condiment", "Ketchup", "Organic", 12, "condiment_ketchup_organic"));
+            CondimentsList.Add(new Products("Condiment", "Butter", "Whipped", 45, 27));
+            CondimentsList.Add(new Products("Condiment", "Ketchup", "Organic", 12, 28));
 
-            SnackList.Add(new Products("Snack", "Chips", "Salted", 33, "snack_chips_salted"));
-            SnackList.Add(new Products("Snack", "Corn", "Grilled", 22, "snack_corn_grilled"));
+            SnackList.Add(new Products("Snack", "Chips", "Salted", 33, 29));
+            SnackList.Add(new Products("Snack", "Corn", "Grilled", 22, 30));
+
+            _cart.Add(SnackList[0]);
 
             mainMenu();
             
@@ -43,7 +47,7 @@ namespace OOP_labb
         private static void mainMenu()
         {
             Console.WriteLine("Welcome to the 2020 shopping simulator, get your hand sanitizer and face masks ready!");
-            Console.WriteLine("What do you want to start with?\n(1) - Create User\n(2) - Select User\n(3) - Exit Shopping Simulator 2020");
+            Console.WriteLine("What do you want to start with?\n(1) - Create User\n(2) - Select User\n(3) - Begin/Continue Shopping\n(4) - Exit Shopping Simulator 2020");
             while (true)
             {
                 int input = getValidInt();
@@ -56,38 +60,112 @@ namespace OOP_labb
                 {
                     createCustomer();
                 }
-                else if(input == 2)
+                else if (input == 2)
                 {
                     selectCustomer();
                 }
-                else if(input == 3)
+                else if (input == 3)
+                {
+                    //shoppning method
+                }
+                else if (input == 4)
                 {
                     //exit program
                 }
                 else
                 {
-                    Console.WriteLine("Choose one of the three alternatives!");
+                    Console.WriteLine("Choose one of the four alternatives!");
                 }
             }
         }
 
         private static void selectCustomer()
         {
-            int back = _customers.Count;
+            int back = _customers.Count+1;
+            int input;
+            List<int> alternatives = new List<int>();
             Console.WriteLine("Users available: ");
             for (int i = 0; i < _customers.Count; i++)
             {
-                Console.WriteLine(i+1 + " " + _customers[0]._UserName); //problem with getting right name
+                Console.WriteLine(i+1 + " " + _customers[i]._UserName);
+				alternatives.Add(i);
             }
-            Console.WriteLine("Type the number corresponding to the user you want to choose: ");
-            //if sats om user eller back
-            //activate correct users shoppingcart
-            createCustomer();
+			Console.WriteLine("\n" + (_customers.Count+1) + " Go Back");
+            Console.WriteLine("Type the number corresponding to the user you want to choose: (When switching users the current cart will be cleared)");
+            while (true)
+            {
+                input = getValidInt();
+                if (alternatives.Contains(input - 1))
+                {
+                    Console.WriteLine("You selected user: " + _customers[input - 1]._UserName);
+                    userMenu();
+                }
+                else if (input == back)
+                {
+                    mainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Input a valid integer");
+                }
+            }
         }
 
-        
+		private static void userMenu()
+		{
+			Console.WriteLine("What do you want to do?\n(1) - View cart\n(2) - Begin/Continue Shopping\n(3) - Return to main menu");
+            while (true)
+            {
+                int input = getValidInt();
+                if (input == -1)
+                {
+                    Console.WriteLine("Write a valid integer: ");
+                }
+                else if (input == 1)
+                {
+                    Console.WriteLine("view cart");
+                    viewCart();
+                }
+                else if (input == 2)
+                {
+                    Console.WriteLine("*shopping*");
+                    //shopping method
+                }
+                else if (input == 3)
+                {
+                    mainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Choose one of the alternatives!");
+                }
+            }
+            
+        }
 
-        static void createCustomer()
+		private static void viewCart()
+		{
+			for (int i = 0; i < _cart.Count; i++)
+			{
+				Console.WriteLine(_cart[i]._ProductName + ", " + _cart[i]._ProductColor + ", Price: " + _cart[i]._ProductPrice + " kr");
+			}
+
+			Console.WriteLine("\nTo return, press 1");
+            while (true)
+            {
+                int input = getValidInt();
+                if (input == 1)
+                {
+                    userMenu();
+                }
+                else
+                {
+					Console.WriteLine("Press \"1\" to return");
+                }
+            }
+		}
+
+		static void createCustomer()
         {
             string name;
             int age;
@@ -120,7 +198,7 @@ namespace OOP_labb
             
             _customers.Add(new Customers(name, age));
             Console.WriteLine("Created Customer: " + _customers[_customers.Count-1]._UserName + "\nAge: " +  _customers[_customers.Count - 1]._UserAge);
-            selectCustomer();
+            userMenu();
         }
     }
 }
