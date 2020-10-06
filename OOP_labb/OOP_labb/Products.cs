@@ -6,10 +6,8 @@ namespace OOP_labb
 {
     class Products
     {
-        private string _productCategory;
         private string _productName;
         private string _productColor;
-        private int _productStock;
         private int _productPrice;
 
         public string _ProductName
@@ -30,12 +28,10 @@ namespace OOP_labb
             set { _productPrice = value; }
         }
 
-        public Products(string category, string name, string color, int stock, int productPrice)
+        public Products(string name, string color, int productPrice)
         {
-            this._productCategory = category;
             this._productName = name;
             this._productColor = color;
-            this._productStock = stock;
             this._productPrice = productPrice;
         }
 
