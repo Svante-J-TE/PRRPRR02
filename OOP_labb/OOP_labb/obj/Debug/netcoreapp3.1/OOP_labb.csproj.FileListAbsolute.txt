@@ -24,3 +24,16 @@ D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.
 D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.dll
 D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.pdb
 D:\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.genruntimeconfig.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.exe
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.deps.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.runtimeconfig.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.runtimeconfig.dev.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\bin\Debug\netcoreapp3.1\OOP_labb.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csprojAssemblyReference.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.AssemblyInfoInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.AssemblyInfo.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.csproj.CoreCompileInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\OOP_labb\OOP_labb\obj\Debug\netcoreapp3.1\OOP_labb.genruntimeconfig.cache

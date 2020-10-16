@@ -1,0 +1,13 @@
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\bin\Debug\netcoreapp3.1\Polymorfi_Labb.exe
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\bin\Debug\netcoreapp3.1\Polymorfi_Labb.deps.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\bin\Debug\netcoreapp3.1\Polymorfi_Labb.runtimeconfig.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\bin\Debug\netcoreapp3.1\Polymorfi_Labb.runtimeconfig.dev.json
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\bin\Debug\netcoreapp3.1\Polymorfi_Labb.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\bin\Debug\netcoreapp3.1\Polymorfi_Labb.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.csprojAssemblyReference.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.AssemblyInfoInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.AssemblyInfo.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.csproj.CoreCompileInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.dll
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\Polymorfi_Labb\Polymorfi_Labb\obj\Debug\netcoreapp3.1\Polymorfi_Labb.genruntimeconfig.cache

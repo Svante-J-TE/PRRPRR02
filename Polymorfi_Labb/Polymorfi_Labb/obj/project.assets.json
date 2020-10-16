@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
-      "projectName": "OOP_labb",
-      "projectPath": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\OOP_labb.csproj",
+      "projectUniqueName": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\Polymorfi_Labb.csproj",
+      "projectName": "Polymorfi_Labb",
+      "projectPath": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\Polymorfi_Labb.csproj",
       "packagesPath": "C:\\Users\\svante.jonsson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\OOP_labb\\OOP_labb\\obj\\",
+      "outputPath": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\svante.jonsson\\AppData\\Roaming\\NuGet\\NuGet.Config",
