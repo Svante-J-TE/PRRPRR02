@@ -16,5 +16,9 @@ namespace Polymorfi_Labb
 
         List<Product> _cart = new List<Product>();
         
+        public List<Product> Cart
+        {
+            get { return _cart; }
+        }
     }
 }
