@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\svante.jonsson\\.nuget\\packages\\": {}
+    "C:\\Users\\svant\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\Polymorfi_Labb.csproj",
+      "projectUniqueName": "D:\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\Polymorfi_Labb.csproj",
       "projectName": "Polymorfi_Labb",
-      "projectPath": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\Polymorfi_Labb.csproj",
-      "packagesPath": "C:\\Users\\svante.jonsson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\svante.jonsson\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\obj\\",
+      "projectPath": "D:\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\Polymorfi_Labb.csproj",
+      "packagesPath": "C:\\Users\\svant\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\GitHub\\PRRPRR02\\Polymorfi_Labb\\Polymorfi_Labb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\svante.jonsson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\svant\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
