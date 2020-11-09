@@ -23,27 +23,50 @@ namespace Calculator
     {
         public MainWindow()
         {
-            TextBlock screen = new TextBlock();
+            TextBlock screen = new TextBlock
+            {
+                Text = "hej hej detta är ett test",
+                FontSize = 100
+            };
+            
 
             InitializeComponent();
             for (int i = 0; i < 5; i++)
             {
-                mainGrid.RowDefinitions.Add(new RowDefinition());
                 mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
-                
+                mainGrid.RowDefinitions.Add(new RowDefinition());
             }
             mainGrid.RowDefinitions[0].Height = new GridLength(2.0, GridUnitType.Star);
+            mainGrid.Children.Add(screen);
+            screen.SetValue(Grid.RowProperty, 0);
+            screen.SetValue(Grid.ColumnProperty, 0);
+            screen.SetValue(Grid.ColumnSpanProperty, 5);
+            
             
             for (int i = 0; i < 10; i++)
             {
-                Button btn = new Button();
                 String btnName = "btn" + i.ToString();
-                btn.Name = btnName;
-                btn.Content = i;
-                
+                Button btn = new Button
+                {
+                    Name = btnName,
+                    Content = i
+                };
+
+
                 mainGrid.Children.Add(btn);
-                btn.SetValue(Grid.RowProperty, 3 - (i/3));
-                btn.SetValue(Grid.ColumnProperty, 3 - (i%3));
+                btn.SetValue(Grid.RowProperty, 4 - i/3);
+                btn.SetValue(Grid.ColumnProperty, 0 + i % 3);
+                /*if(btn.Content.ToString() == "0")
+                {
+                    btn.SetValue(Grid.RowProperty, 4);
+                    btn.SetValue(Grid.ColumnProperty, 2);
+                }
+                else
+                {
+                    btn.SetValue(Grid.RowProperty, 3 + i/3);
+                    btn.SetValue(Grid.ColumnProperty, 3 + i%3);
+                }*/
+
             }
         }
     }
