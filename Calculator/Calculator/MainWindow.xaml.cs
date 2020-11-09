@@ -43,7 +43,7 @@ namespace Calculator
             screen.SetValue(Grid.ColumnSpanProperty, 5);
             
             
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 12; i++)
             {
                 String btnName = "btn" + i.ToString();
                 Button btn = new Button
@@ -51,6 +51,21 @@ namespace Calculator
                     Name = btnName,
                     Content = i
                 };
+                if(i == 1)
+                {
+                    btn.Name = "btnPoint";
+                    btn.Content = ",";
+                }
+                else if(i == 2)
+                {
+                    btn.Name = "btnDel";
+                    btn.Content = "DEL";
+                }
+                else if(i >= 3)
+                {
+                    btn.Name = "btn" + (i - 2);
+                    btn.Content = i - 2;
+                }
 
 
                 mainGrid.Children.Add(btn);
