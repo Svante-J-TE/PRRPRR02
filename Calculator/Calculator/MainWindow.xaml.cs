@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -23,16 +24,6 @@ namespace Calculator
         public MainWindow()
         {
             TextBlock screen = new TextBlock();
-            Button btnOne = new Button();
-            Button btnTwo = new Button();
-            Button btnThree = new Button();
-            Button btnFour = new Button();
-            Button btnFive = new Button();
-            Button btnSix = new Button();
-            Button btnSeven = new Button();
-            Button btnEigth = new Button();
-            Button btnNine = new Button();
-            Button btnZero = new Button();
 
             InitializeComponent();
             for (int i = 0; i < 5; i++)
@@ -40,16 +31,20 @@ namespace Calculator
                 mainGrid.RowDefinitions.Add(new RowDefinition());
                 mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
             }
+            for (int i = 0; i < 10; i++)
+            {
+                String btnName = "btn" + i.ToString();
+                Button btn = new Button();
+                btn.Name = btnName;
+                btn.Content = i;
+                mainGrid.Children.Add(btn);
+            }
             
-            mainGrid.Children.Add(new Button());
-            mainGrid.Children.Add(new Button());
-            mainGrid.Children.Add(new Button());
-            mainGrid.Children.Add(new Button());
-            mainGrid.Children[5].SetValue(Name = "test");
+            
 
 
-            
-            
+
+
         }
     }
 }
