@@ -32,8 +32,10 @@ namespace Calculator
             TextBlock screen = new TextBlock
             {
                 Text = "hej hej detta är ett test",
-                FontSize = 100
-            };
+                FontSize = 100,
+                
+        };
+            screen.Background = Brushes.Black;
 
             InitializeComponent();
 
@@ -60,7 +62,7 @@ namespace Calculator
 
             string[,] buttonContent = new string[,]
             {
-                {"^x", "√", "(", ")", "Quit"},
+                {"^", "√", "(", ")", "Quit"},
                 {"7", "8", "9", "DEL", "AC"},
                 {"4", "5", "6", "X", "/"},
                 {"1", "2", "3", "+", "-"},
@@ -71,11 +73,13 @@ namespace Calculator
             {
                 for (int j = 0; j < buttonContent.GetLength(1); j++)
                 {
-                    Button btn = new Button { 
+                    Button btn = new Button {
                         Content = buttonContent[i, j],
                     };
-                    btn.Click += Button_Clicked();
-                    mainGrid.Children.Add(btn)
+                    btn.SetValue(Grid.RowProperty, i + 1);
+                    btn.SetValue(Grid.ColumnProperty, j);
+                    btn.Click += new RoutedEventHandler(Button_Clicked);
+                    mainGrid.Children.Add(btn);
                 }
             }
 
@@ -122,10 +126,10 @@ namespace Calculator
             
             }
 
-        private RoutedEventHandler Button_Clicked()
+        public void Button_Clicked(object sender, RoutedEventArgs e)
         {
+
             throw new NotImplementedException();
         }
     }
     }
-}
