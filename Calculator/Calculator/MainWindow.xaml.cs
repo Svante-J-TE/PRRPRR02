@@ -29,17 +29,24 @@ namespace Calculator
 
             expressionModel.MyProperty = 1;
 
-            TextBlock screen = new TextBlock
+            TextBlock inputScreen = new TextBlock
             {
                 Text = "hej hej detta är ett test",
                 FontSize = 100,
                 
         };
-            screen.Background = Brushes.Black;
+            TextBlock outputScreen = new TextBlock
+            {
+                Text = "hej hej detta är ett test",
+                FontSize = 100,
+
+            };
+            inputScreen.Background = Brushes.Black;
+            outputScreen.Background = Brushes.Black;
 
             InitializeComponent();
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 7; i++)
             {
                 mainGrid.RowDefinitions.Add(new RowDefinition());
             }
@@ -48,14 +55,18 @@ namespace Calculator
                 mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
 
             }
-            mainGrid.RowDefinitions[0].Height = new GridLength(2.0, GridUnitType.Star);
-            mainGrid.Children.Add(screen);
-            screen.SetValue(Grid.RowProperty, 0);
-            screen.SetValue(Grid.ColumnProperty, 0);
-            screen.SetValue(Grid.ColumnSpanProperty, 5);
+            //mainGrid.RowDefinitions[0].Height = new GridLength(2.0, GridUnitType.Star);
+            mainGrid.Children.Add(inputScreen);
+            inputScreen.SetValue(Grid.RowProperty, 0);
+            inputScreen.SetValue(Grid.ColumnProperty, 0);
+            inputScreen.SetValue(Grid.ColumnSpanProperty, 5);
+            mainGrid.Children.Add(outputScreen);
+            outputScreen.SetValue(Grid.RowProperty, 1);
+            outputScreen.SetValue(Grid.ColumnProperty, 0);
+            outputScreen.SetValue(Grid.ColumnSpanProperty, 5);
 
 
-            
+
 
             var button = new Button();
             button.Content = "1";
@@ -76,58 +87,21 @@ namespace Calculator
                     Button btn = new Button {
                         Content = buttonContent[i, j],
                     };
-                    btn.SetValue(Grid.RowProperty, i + 1);
+                    btn.SetValue(Grid.RowProperty, i + 2);
                     btn.SetValue(Grid.ColumnProperty, j);
                     btn.Click += new RoutedEventHandler(Button_Clicked);
                     mainGrid.Children.Add(btn);
                 }
             }
 
-            /*
             
-            for (int i = 0; i < 12; i++)
-            {
-                String btnName = "btn" + i.ToString();
-                Button btn = new Button
-                {
-                    Name = btnName,
-                    Content = i
-                };
-                if(i == 1)
-                {
-                    btn.Name = "btnPoint";
-                    btn.Content = ",";
-                }
-                else if(i == 2)
-                {
-                    btn.Name = "btnDel";
-                    btn.Content = "DEL";
-                }
-                else if(i >= 3)
-                {
-                    btn.Name = "btn" + (i - 2);
-                    btn.Content = i - 2;
-                }
-
-
-                mainGrid.Children.Add(btn);
-                btn.SetValue(Grid.RowProperty, 4 - i/3);
-                btn.SetValue(Grid.ColumnProperty, 0 + i % 3);
-                /*if(btn.Content.ToString() == "0")
-                {
-                    btn.SetValue(Grid.RowProperty, 4);
-                    btn.SetValue(Grid.ColumnProperty, 2);
-                }
-                else
-                {
-                    btn.SetValue(Grid.RowProperty, 3 + i/3);
-                    btn.SetValue(Grid.ColumnProperty, 3 + i%3);
-                }*/
             
             }
 
         public void Button_Clicked(object sender, RoutedEventArgs e)
         {
+
+
 
             throw new NotImplementedException();
         }
