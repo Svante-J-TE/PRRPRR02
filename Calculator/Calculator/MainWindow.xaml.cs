@@ -26,13 +26,16 @@ namespace Calculator
         {
             Text = "",
             FontSize = 100,
-            HorizontalAlignment = HorizontalAlignment.Right
+            HorizontalAlignment = HorizontalAlignment.Right,
+            Background = Brushes.Black,
+            Foreground = Brushes.White
         };
         TextBlock inputScreen = new TextBlock
         {
             Text = "",
             FontSize = 100,
-            //Background = Brushes.Black
+            Background = Brushes.Black,
+            Foreground = Brushes.White
         };
 
         public MainWindow()
