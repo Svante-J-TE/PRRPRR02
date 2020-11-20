@@ -21,7 +21,7 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        static List<String> inputList = new List<String>();
+        static List<string> inputList = new List<string>();
         static TextBlock outputScreen = new TextBlock
         {
             Text = "",
@@ -118,7 +118,7 @@ namespace Calculator
                 {
                     if (checkLength() == true)
                     {
-                        outputScreen.Text += calculate();
+                        outputScreen.Text += prepareCalc();
                     }
                 }
                 else
@@ -145,19 +145,44 @@ namespace Calculator
             }
         }
 
-        public double calculate()
+        public double prepareCalc()
         {
             double output = 0;
+            List<double> numberList = new List<double>();
+            List<string> mathOpList = new List<string>();
             for (int i = 0; i < inputList.Count; i++)
             {
-                if (IsNumber(inputList[0]) == true)
+                if (IsNumber(inputList[i]) == true)
                 {
-                    output = Convert.ToDouble(inputList[0]);
+                    numberList.Add(Convert.ToDouble(inputList[i]));
+                    mathOpList.Add("");
+                }
+                else
+                {
+                    numberList.Add(double.NaN);
+                    mathOpList.Add(inputList[i]);
                 }
             }
-            
+            calculate(numberList, mathOpList);
             return output;
         }
+        public void calculate(List<double> one, List<string> two)
+        {
+            int amount;
+            if (one.Count >= two.Count)
+            {
+                amount = one.Count;
+            }
+            else
+            {
+                amount = two.Count;
+            }
+            for (int i = 0; i < amount; i++)
+            {
+                //varanan lista läggs till för att få uträkningen som ska calcyleras med siffror och annat
+            }
+        }
+
         public static bool IsNumber(string num)
         {
             return num.All(char.IsDigit);
