@@ -148,15 +148,19 @@ namespace Calculator
         public double calculate()
         {
             double output = 0;
-            if (IsNumber(inputList[0]) == true)
+            for (int i = 0; i < inputList.Count; i++)
             {
-                output = Convert.ToDouble(inputList[0]);
+                if (IsNumber(inputList[0]) == true)
+                {
+                    output = Convert.ToDouble(inputList[0]);
+                }
             }
+            
             return output;
         }
         public static bool IsNumber(string num)
         {
-            return nu,.All(char.IsDigit);
+            return num.All(char.IsDigit);
         }
     }
 }
