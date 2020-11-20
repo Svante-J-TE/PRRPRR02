@@ -21,11 +21,12 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        static List<String> inputList = new List<String>();
         static TextBlock outputScreen = new TextBlock
         {
             Text = "",
             FontSize = 100,
-
+            HorizontalAlignment = HorizontalAlignment.Right
         };
         TextBlock inputScreen = new TextBlock
         {
@@ -80,7 +81,8 @@ namespace Calculator
             {
                 for (int j = 0; j < buttonContent.GetLength(1); j++)
                 {
-                    Button btn = new Button {
+                    Button btn = new Button
+                    {
                         Content = buttonContent[i, j],
                     };
                     btn.SetValue(Grid.RowProperty, i + 2);
@@ -90,17 +92,71 @@ namespace Calculator
                 }
             }
 
-            
-            
-            }
+
+
+        }
 
         public void Button_Clicked(object sender, RoutedEventArgs e)
         {
 
             if (e.Source is Button button)
             {
-                inputScreen.Text += button.Content;
+                inputScreen.Text = "";
+
+                if (button.Content.ToString() == "DEL")
+                {
+                    if (checkLength() == true)
+                    {
+                        inputList.RemoveAt(inputList.Count-1);
+                    }
+                }
+                else if (button.Content.ToString() == "AC")
+                {
+                    inputList.Clear();
+                }
+                else if (button.Content.ToString() == "EXE")
+                {
+                    if (checkLength() == true)
+                    {
+                        outputScreen.Text += calculate();
+                    }
+                }
+                else
+                {
+                    inputList.Add(button.Content.ToString());
+                }
+                for (int i = 0; i < inputList.Count; i++)
+                {
+                    inputScreen.Text += inputList[i];
+                }
             }
+        }
+
+        public bool checkLength()
+        {
+            int length = inputList.Count - 1;
+            if (inputList.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public double calculate()
+        {
+            double output = 0;
+            if (IsNumber(inputList[0]) == true)
+            {
+                output = Convert.ToDouble(inputList[0]);
+            }
+            return output;
+        }
+        public static bool IsNumber(string num)
+        {
+            return nu,.All(char.IsDigit);
         }
     }
 }
