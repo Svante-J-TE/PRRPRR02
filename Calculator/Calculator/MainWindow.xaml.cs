@@ -70,7 +70,7 @@ namespace Calculator
 
             string[,] buttonContent = new string[,]
             {
-                {"^", "√", "(", ")", "Quit"},
+                {"^", "√", "(", ")", "Exit"},
                 {"7", "8", "9", "DEL", "AC"},
                 {"4", "5", "6", "X", "/"},
                 {"1", "2", "3", "+", "-"},
@@ -120,6 +120,10 @@ namespace Calculator
                     {
                         outputScreen.Text += prepareCalc();
                     }
+                }
+                else if (button.Content.ToString() == "Exit")
+                {
+                    System.Windows.Application.Current.Shutdown();
                 }
                 else
                 {
