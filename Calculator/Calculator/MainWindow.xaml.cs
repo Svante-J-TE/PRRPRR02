@@ -21,30 +21,26 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        static TextBlock outputScreen = new TextBlock
+        {
+            Text = "",
+            FontSize = 100,
+
+        };
+        TextBlock inputScreen = new TextBlock
+        {
+            Text = "",
+            FontSize = 100,
+            //Background = Brushes.Black
+        };
 
         public MainWindow()
         {
+            InitializeComponent();
+
             var expressionModel = new ExpressionModel();
 
             expressionModel.MyProperty = 1;
-
-            TextBlock inputScreen = new TextBlock
-            {
-                Text = "hej hej detta är ett test",
-                FontSize = 100,
-                
-        };
-            TextBlock outputScreen = new TextBlock
-            {
-                Text = "hej hej detta är ett test",
-                FontSize = 100,
-
-            };
-            inputScreen.Background = Brushes.Black;
-            outputScreen.Background = Brushes.Black;
-
-            InitializeComponent();
 
             for (int i = 0; i < 7; i++)
             {
@@ -101,9 +97,10 @@ namespace Calculator
         public void Button_Clicked(object sender, RoutedEventArgs e)
         {
 
-
-
-            throw new NotImplementedException();
+            if (e.Source is Button button)
+            {
+                inputScreen.Text += button.Content;
+            }
         }
     }
-    }
+}
