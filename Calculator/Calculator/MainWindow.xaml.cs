@@ -21,10 +21,15 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        static List<string> mathOperatorList = new List<string>()
+        {
+            "+", "-", "X", "/", "^", "√", "EXP"
+        };
         static List<string> inputList = new List<string>();
+        static string inputString = "";
         static TextBlock outputScreen = new TextBlock
         {
-            Text = "",
+            Text = "0",
             FontSize = 100,
             HorizontalAlignment = HorizontalAlignment.Right,
             Background = Brushes.Black,
@@ -110,7 +115,7 @@ namespace Calculator
                 {
                     if (checkLength() == true)
                     {
-                        inputList.RemoveAt(inputList.Count-1);
+                        inputList.RemoveAt(inputList.Count - 1);
                     }
                 }
                 else if (button.Content.ToString() == "AC")
@@ -121,16 +126,30 @@ namespace Calculator
                 {
                     if (checkLength() == true)
                     {
-                        outputScreen.Text += prepareCalc();
+                        testMethod();
+                        //outputScreen.Text += testMethod();
                     }
                 }
                 else if (button.Content.ToString() == "Exit")
                 {
-                    System.Windows.Application.Current.Shutdown();
+                    Application.Current.Shutdown();
+                }
+                else if (mathOperatorList.Contains(button.Content.ToString()))
+                {
+                    if (mathOperatorList.Contains(inputList[inputList.Count - 1]))
+                    {
+                        //dont add operator, "+/" or "-*" is not valid
+                    }
+                    else
+                    {
+                        inputList.Add(button.Content.ToString());
+                        inputString += button.Content.ToString();
+                    }
                 }
                 else
                 {
                     inputList.Add(button.Content.ToString());
+                    inputString += button.Content.ToString();
                 }
                 for (int i = 0; i < inputList.Count; i++)
                 {
@@ -194,5 +213,88 @@ namespace Calculator
         {
             return num.All(char.IsDigit);
         }
+
+        public void testMethod()
+        {
+            double jointNumber = Convert.ToDouble(outputScreen.Text);
+            var primaryCalculations = inputString.Split('X', '/');
+            var secondaryCalculations = inputString.Split('+', '-');
+            List<double> temp = new List<double>();
+            List<double> calcs = new List<double>();
+
+            if (inputString.Contains("X"))
+            {
+                for (int i = 0; i < secondaryCalculations.Length; i++)
+                {
+                    if (secondaryCalculations[i].Contains("X"))
+                    {
+                        var tmp = secondaryCalculations[i].Split('X');
+                        for (int j = 0; j < tmp.Length; j++)
+                        {
+                            temp.Add(Convert.ToDouble(tmp[j]));
+                        }
+                        calcs.Add(temp[0] * temp[1]);
+                    }
+                }
+                //jointNumber = (Convert.ToDouble(primaryCalculations[0]) * Convert.ToDouble(primaryCalculations[1]));
+            }
+            if (inputString.Contains("/"))
+            {
+                for (int i = 0; i < secondaryCalculations.Length; i++)
+                {
+                    if (secondaryCalculations[i].Contains("/"))
+                    {
+                        var tmp = secondaryCalculations[i].Split('/');
+                        for (int j = 0; j < tmp.Length; j++)
+                        {
+                            temp.Add(Convert.ToDouble(tmp[j]));
+                        }
+                        calcs.Add(temp[0] / temp[1]);
+                    }
+                }
+                //jointNumber = (Convert.ToDouble(primaryCalculations[0]) / Convert.ToDouble(primaryCalculations[1]));
+            }
+            if (inputString.Contains("+"))
+            {
+                for (int i = 0; i < primaryCalculations.Length; i++)
+                {
+                    if (primaryCalculations[i].Contains("+"))
+                    {
+                        var tmp = primaryCalculations[i].Split('+');
+                        for (int j = 0; j < tmp.Length; j++)
+                        {
+                            temp.Add(Convert.ToDouble(tmp[j]));
+                        }
+                        calcs.Add(temp[0] + temp[1]);
+                    }
+                }
+                //jointNumber = (Convert.ToDouble(secondaryCalculations[0]) + Convert.ToDouble(secondaryCalculations[1]));
+            }
+            if (inputString.Contains("-"))
+            {
+                for (int i = 0; i < primaryCalculations.Length; i++)
+                {
+                    if (primaryCalculations[i].Contains("-"))
+                    {
+                        var tmp = primaryCalculations[i].Split('-');
+                        for (int j = 0; j < tmp.Length; j++)
+                        {
+                            temp.Add(Convert.ToDouble(tmp[j]));
+                        }
+                        calcs.Add(temp[0] - temp[1]);
+                    }
+                }
+                //jointNumber = (Convert.ToDouble(secondaryCalculations[0]) - Convert.ToDouble(secondaryCalculations[1]));
+            }
+            for (int i = 0; i < calcs.Count; i++)
+            {
+                jointNumber += calcs[i];
+            }
+            //problem is that numbers that already been multiplied is added or subtracted in next step
+            outputScreen.Text = jointNumber.ToString();
+            inputString = "";
+        }
+
     }
 }
+
