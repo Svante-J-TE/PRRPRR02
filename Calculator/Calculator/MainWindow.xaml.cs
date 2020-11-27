@@ -222,6 +222,7 @@ namespace Calculator
             List<double> temp = new List<double>();
             List<double> calcs = new List<double>();
 
+
             if (inputString.Contains("X"))
             {
                 for (int i = 0; i < secondaryCalculations.Length; i++)
@@ -236,7 +237,6 @@ namespace Calculator
                         calcs.Add(temp[0] * temp[1]);
                     }
                 }
-                //jointNumber = (Convert.ToDouble(primaryCalculations[0]) * Convert.ToDouble(primaryCalculations[1]));
             }
             if (inputString.Contains("/"))
             {
@@ -252,7 +252,6 @@ namespace Calculator
                         calcs.Add(temp[0] / temp[1]);
                     }
                 }
-                //jointNumber = (Convert.ToDouble(primaryCalculations[0]) / Convert.ToDouble(primaryCalculations[1]));
             }
             if (inputString.Contains("+"))
             {
@@ -268,7 +267,6 @@ namespace Calculator
                         calcs.Add(temp[0] + temp[1]);
                     }
                 }
-                //jointNumber = (Convert.ToDouble(secondaryCalculations[0]) + Convert.ToDouble(secondaryCalculations[1]));
             }
             if (inputString.Contains("-"))
             {
@@ -284,7 +282,6 @@ namespace Calculator
                         calcs.Add(temp[0] - temp[1]);
                     }
                 }
-                //jointNumber = (Convert.ToDouble(secondaryCalculations[0]) - Convert.ToDouble(secondaryCalculations[1]));
             }
             for (int i = 0; i < calcs.Count; i++)
             {
