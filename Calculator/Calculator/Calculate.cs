@@ -6,10 +6,10 @@ namespace Calculator
 {
     class Calculate
     {
-        public double addNumbers(double[] numbers)
+        public double addNumbers(List<double> numbers)
         {
             double sum = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < numbers.Count; i++)
             {
                 sum += numbers[i];
             }

@@ -21,12 +21,13 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        Calculate calculate = new Calculate();
+
         static List<string> mathOperatorList = new List<string>()
         {
             "+", "-", "X", "/", "^", "√", "EXP"
         };
         static List<string> inputList = new List<string>();
-        static string inputString = "";
         static TextBlock outputScreen = new TextBlock
         {
             Text = "0",
@@ -46,12 +47,6 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
-
-            var calculate = new Calculate();
-
-            var expressionModel = new ExpressionModel();
-
-            expressionModel.MyProperty = 1;
 
             for (int i = 0; i < 7; i++)
             {
@@ -108,11 +103,9 @@ namespace Calculator
 
         public void Button_Clicked(object sender, RoutedEventArgs e)
         {
-
+            inputScreen.Text = "";
             if (e.Source is Button button)
             {
-                inputScreen.Text = "";
-
                 if (button.Content.ToString() == "DEL")
                 {
                     if (checkLength() == true)
@@ -124,40 +117,36 @@ namespace Calculator
                 {
                     inputList.Clear();
                 }
-                else if (button.Content.ToString() == "EXE")
-                {
-                    if (checkLength() == true)
-                    {
-                        testMethod();
-                        //outputScreen.Text += testMethod();
-                    }
-                }
                 else if (button.Content.ToString() == "Exit")
                 {
                     Application.Current.Shutdown();
                 }
+                else if(button.Content.ToString() == "EXE" && inputList.Any())
+                {
+                    testMethod();
+                }
                 else if (mathOperatorList.Contains(button.Content.ToString()))
                 {
-                    if (mathOperatorList.Contains(inputList[inputList.Count - 1]))
-                    {
-                        //dont add operator, "+/" or "-*" is not valid
-                    }
-                    else
+                    if (!(!inputList.Any() || mathOperatorList.Contains(inputList[inputList.Count - 1])))
                     {
                         inputList.Add(button.Content.ToString());
-                        inputString += button.Content.ToString();
+                        //dont add operator, "+/" or "-*"because it is not valid
                     }
+
                 }
                 else
                 {
-                    inputList.Add(button.Content.ToString());
-                    inputString += button.Content.ToString();
-                }
-                for (int i = 0; i < inputList.Count; i++)
-                {
-                    inputScreen.Text += inputList[i];
+                    if (button.Content.ToString() != "EXE")
+                    {
+                        inputList.Add(button.Content.ToString());
+                    }
                 }
             }
+            for (int i = 0; i < inputList.Count; i++)
+            {
+                inputScreen.Text += inputList[i];
+            }
+            
         }
 
         public bool checkLength()
@@ -173,43 +162,8 @@ namespace Calculator
             }
         }
 
-        public double prepareCalc()
-        {
-            double output = 0;
-            List<double> numberList = new List<double>();
-            List<string> mathOpList = new List<string>();
-            for (int i = 0; i < inputList.Count; i++)
-            {
-                if (IsNumber(inputList[i]) == true)
-                {
-                    numberList.Add(Convert.ToDouble(inputList[i]));
-                    mathOpList.Add("");
-                }
-                else
-                {
-                    numberList.Add(double.NaN);
-                    mathOpList.Add(inputList[i]);
-                }
-            }
-            calculate(numberList, mathOpList);
-            return output;
-        }
-        public void calculate(List<double> one, List<string> two)
-        {
-            int amount;
-            if (one.Count >= two.Count)
-            {
-                amount = one.Count;
-            }
-            else
-            {
-                amount = two.Count;
-            }
-            for (int i = 0; i < amount; i++)
-            {
-                //varanan lista läggs till för att få uträkningen som ska calcyleras med siffror och annat
-            }
-        }
+        
+        
 
         public static bool IsNumber(string num)
         {
@@ -218,80 +172,71 @@ namespace Calculator
 
         public void testMethod()
         {
-            double jointNumber = Convert.ToDouble(outputScreen.Text);
-            var primaryCalculations = inputString.Split('X', '/');
-            var secondaryCalculations = inputString.Split('+', '-');
+            string function = "";
+            for (int i = 0; i < inputList.Count; i++)
+            {
+                function += inputList[i];
+            }
+            var primaryCalculations = function.Split('X', '/');
+            var secondaryCalculations = function.Split('+', '-');
+            List<double> finalFunction = new List<double>();
             List<double> temp = new List<double>();
+
+            double jointNumber = Convert.ToDouble(outputScreen.Text);
             List<double> calcs = new List<double>();
+            
 
+            
+            
+            //For calculating multiplication
+            finalCalcPrep(function, "X", secondaryCalculations, finalFunction);
+            //For calculating multiplication
+            finalCalcPrep(function, "/", secondaryCalculations, finalFunction);
+            //For calculating multiplication
+            finalCalcPrep(function, "+", primaryCalculations, finalFunction);
+            //For calculating multiplication
+            finalCalcPrep(function, "-", primaryCalculations, finalFunction);
+            //Final calculation
+            outputScreen.Text = calculate.addNumbers(finalFunction).ToString();
+            finalFunction.Clear();
 
-            if (inputString.Contains("X"))
-            {
-                for (int i = 0; i < secondaryCalculations.Length; i++)
-                {
-                    if (secondaryCalculations[i].Contains("X"))
-                    {
-                        var tmp = secondaryCalculations[i].Split('X');
-                        for (int j = 0; j < tmp.Length; j++)
-                        {
-                            temp.Add(Convert.ToDouble(tmp[j]));
-                        }
-                        calcs.Add(temp[0] * temp[1]);
-                    }
-                }
-            }
-            if (inputString.Contains("/"))
-            {
-                for (int i = 0; i < secondaryCalculations.Length; i++)
-                {
-                    if (secondaryCalculations[i].Contains("/"))
-                    {
-                        var tmp = secondaryCalculations[i].Split('/');
-                        for (int j = 0; j < tmp.Length; j++)
-                        {
-                            temp.Add(Convert.ToDouble(tmp[j]));
-                        }
-                        calcs.Add(temp[0] / temp[1]);
-                    }
-                }
-            }
-            if (inputString.Contains("+"))
-            {
-                for (int i = 0; i < primaryCalculations.Length; i++)
-                {
-                    if (primaryCalculations[i].Contains("+"))
-                    {
-                        var tmp = primaryCalculations[i].Split('+');
-                        for (int j = 0; j < tmp.Length; j++)
-                        {
-                            temp.Add(Convert.ToDouble(tmp[j]));
-                        }
-                        calcs.Add(temp[0] + temp[1]);
-                    }
-                }
-            }
-            if (inputString.Contains("-"))
-            {
-                for (int i = 0; i < primaryCalculations.Length; i++)
-                {
-                    if (primaryCalculations[i].Contains("-"))
-                    {
-                        var tmp = primaryCalculations[i].Split('-');
-                        for (int j = 0; j < tmp.Length; j++)
-                        {
-                            temp.Add(Convert.ToDouble(tmp[j]));
-                        }
-                        calcs.Add(temp[0] - temp[1]);
-                    }
-                }
-            }
-            for (int i = 0; i < calcs.Count; i++)
-            {
-                jointNumber += calcs[i];
-            }
             //problem is that numbers that already been multiplied is added or subtracted in next step
-            outputScreen.Text = jointNumber.ToString();
-            inputString = "";
+        }
+
+        public void finalCalcPrep(string function, string op, string[] splitFunction, List<double> finalFunction)
+        {
+            List<double> temp = new List<double>();
+            if (function.Contains(op))
+            {
+                for (int i = 0; i < splitFunction.Length; i++)
+                {
+                    if (splitFunction[i].Contains(op))
+                    {
+                        var tmp = splitFunction[i].Split(op);
+                        for (int j = 0; j < tmp.Length; j++)
+                        {
+                            temp.Add(Convert.ToDouble(tmp[j]));
+                        }
+                        switch (op)
+                        {
+                            case "X":
+                                finalFunction.Add(temp[0] * temp[1]);
+                                break;
+                            case "/":
+                                finalFunction.Add(temp[0] / temp[1]);
+                                break;
+                            case "+":
+                                finalFunction.Add(temp[0] + temp[1]);
+                                break;
+                            case "-":
+                                finalFunction.Add(temp[0] - temp[1]);
+                                break;
+                        }
+                        temp.Clear();
+                    }
+                }
+            }
+
         }
 
     }
