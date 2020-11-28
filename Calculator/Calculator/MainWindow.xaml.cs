@@ -47,6 +47,8 @@ namespace Calculator
         {
             InitializeComponent();
 
+            var calculate = new Calculate();
+
             var expressionModel = new ExpressionModel();
 
             expressionModel.MyProperty = 1;
