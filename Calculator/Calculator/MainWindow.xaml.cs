@@ -31,17 +31,24 @@ namespace Calculator
         static TextBlock outputScreen = new TextBlock
         {
             Text = "0",
-            FontSize = 100,
+            FontSize = 70,
             HorizontalAlignment = HorizontalAlignment.Right,
-            Background = Brushes.Black,
             Foreground = Brushes.White
         };
         TextBlock inputScreen = new TextBlock
         {
             Text = "",
-            FontSize = 100,
-            Background = Brushes.Black,
+            FontSize = 70,
             Foreground = Brushes.White
+        };
+
+        static Viewbox testar = new Viewbox
+        {
+            HorizontalAlignment = HorizontalAlignment.Left
+        };
+        static Viewbox testar2 = new Viewbox
+        {
+            HorizontalAlignment = HorizontalAlignment.Right
         };
 
         public MainWindow()
@@ -57,21 +64,18 @@ namespace Calculator
                 mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
 
             }
-            //mainGrid.RowDefinitions[0].Height = new GridLength(2.0, GridUnitType.Star);
-            mainGrid.Children.Add(inputScreen);
-            inputScreen.SetValue(Grid.RowProperty, 0);
-            inputScreen.SetValue(Grid.ColumnProperty, 0);
-            inputScreen.SetValue(Grid.ColumnSpanProperty, 5);
-            mainGrid.Children.Add(outputScreen);
-            outputScreen.SetValue(Grid.RowProperty, 1);
-            outputScreen.SetValue(Grid.ColumnProperty, 0);
-            outputScreen.SetValue(Grid.ColumnSpanProperty, 5);
+            mainGrid.Children.Add(testar);
+            mainGrid.Children.Add(testar2);
 
+            testar.Child = inputScreen;
+            testar2.Child = outputScreen;
 
-
-
-            var button = new Button();
-            button.Content = "1";
+            testar.SetValue(Grid.RowProperty, 0);
+            testar2.SetValue(Grid.RowProperty, 1);
+            testar.SetValue(Grid.ColumnProperty, 0);
+            testar.SetValue(Grid.ColumnSpanProperty, 5);
+            testar2.SetValue(Grid.ColumnProperty, 0);
+            testar2.SetValue(Grid.ColumnSpanProperty, 5);
 
             string[,] buttonContent = new string[,]
             {
@@ -96,14 +100,11 @@ namespace Calculator
                     mainGrid.Children.Add(btn);
                 }
             }
-
-
-
         }
 
         public void Button_Clicked(object sender, RoutedEventArgs e)
         {
-            inputScreen.Text = "";
+            inputScreen.Text = null;
             if (e.Source is Button button)
             {
                 if (button.Content.ToString() == "DEL")
@@ -121,7 +122,7 @@ namespace Calculator
                 {
                     Application.Current.Shutdown();
                 }
-                else if(button.Content.ToString() == "EXE" && inputList.Any())
+                else if (button.Content.ToString() == "EXE" && inputList.Any())
                 {
                     testMethod();
                 }
@@ -132,7 +133,6 @@ namespace Calculator
                         inputList.Add(button.Content.ToString());
                         //dont add operator, "+/" or "-*"because it is not valid
                     }
-
                 }
                 else
                 {
@@ -146,7 +146,7 @@ namespace Calculator
             {
                 inputScreen.Text += inputList[i];
             }
-            
+
         }
 
         public bool checkLength()
@@ -162,8 +162,8 @@ namespace Calculator
             }
         }
 
-        
-        
+
+
 
         public static bool IsNumber(string num)
         {
@@ -177,68 +177,76 @@ namespace Calculator
             {
                 function += inputList[i];
             }
-            var primaryCalculations = function.Split('X', '/');
-            var secondaryCalculations = function.Split('+', '-');
+
             List<double> finalFunction = new List<double>();
-            List<double> temp = new List<double>();
+            List<double> listOfNumbers = getNumbers(function);
+            List<string> listOfOperators = getOperators(function);
 
-            double jointNumber = Convert.ToDouble(outputScreen.Text);
-            List<double> calcs = new List<double>();
-            
+            for (int i = 0; i < listOfOperators.Count; i++)
+            {
+                switch (listOfOperators[i])
+                {
+                    case "X":
+                        finalFunction.Add(listOfNumbers[i] * listOfNumbers[i + 1]);
+                        break;
+                    case "/":
+                        finalFunction.Add(listOfNumbers[i] / listOfNumbers[i + 1]);
+                        break;
+                    case "+":
+                        finalFunction.Add(listOfNumbers[i] + listOfNumbers[i + 1]);
+                        break;
+                    case "-":
+                        finalFunction.Add(listOfNumbers[i] + listOfNumbers[i + 1]);
+                        //addition with a negative number results in subtraction
+                        break;
+                }
+            }
 
-            
-            
-            //For calculating multiplication
-            finalCalcPrep(function, "X", secondaryCalculations, finalFunction);
-            //For calculating multiplication
-            finalCalcPrep(function, "/", secondaryCalculations, finalFunction);
-            //For calculating multiplication
-            finalCalcPrep(function, "+", primaryCalculations, finalFunction);
-            //For calculating multiplication
-            finalCalcPrep(function, "-", primaryCalculations, finalFunction);
+
             //Final calculation
-            outputScreen.Text = calculate.addNumbers(finalFunction).ToString();
+            
+            outputScreen.Text = Math.Round(calculate.addNumbers(finalFunction), 8).ToString();
             finalFunction.Clear();
+            inputList.Clear();
 
             //problem is that numbers that already been multiplied is added or subtracted in next step
         }
 
-        public void finalCalcPrep(string function, string op, string[] splitFunction, List<double> finalFunction)
+        public List<double> getNumbers(string function)
         {
-            List<double> temp = new List<double>();
-            if (function.Contains(op))
+            var numbers = function.Split('+', 'X', '/');
+            List<double> listOfNumbers = new List<double>();
+            for (int i = 0; i < numbers.Length; i++)
             {
-                for (int i = 0; i < splitFunction.Length; i++)
+                if (numbers[i].Contains('-'))
                 {
-                    if (splitFunction[i].Contains(op))
+                    var temp = numbers[i].Split('-');
+                    listOfNumbers.Add(Convert.ToDouble(temp[0]));
+                    for (int j = 0; j < temp.Length - 1; j++)
                     {
-                        var tmp = splitFunction[i].Split(op);
-                        for (int j = 0; j < tmp.Length; j++)
-                        {
-                            temp.Add(Convert.ToDouble(tmp[j]));
-                        }
-                        switch (op)
-                        {
-                            case "X":
-                                finalFunction.Add(temp[0] * temp[1]);
-                                break;
-                            case "/":
-                                finalFunction.Add(temp[0] / temp[1]);
-                                break;
-                            case "+":
-                                finalFunction.Add(temp[0] + temp[1]);
-                                break;
-                            case "-":
-                                finalFunction.Add(temp[0] - temp[1]);
-                                break;
-                        }
-                        temp.Clear();
+                        listOfNumbers.Add(Convert.ToDouble(temp[j + 1]) * (-1));
                     }
                 }
+                else
+                {
+                    listOfNumbers.Add(Convert.ToDouble(numbers[i]));
+                }
             }
-
+            return listOfNumbers;
         }
-
+        public List<string> getOperators(string function)
+        {
+            var mathOperators = function.Split('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.');
+            List<string> listOfOperators = new List<string>();
+            for (int i = 0; i < mathOperators.Length; i++)
+            {
+                if (mathOperators[i] != "")
+                {
+                    listOfOperators.Add(mathOperators[i]);
+                }
+            }
+            return listOfOperators;
+        }
     }
 }
 

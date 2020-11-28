@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="450">
-    <Grid Name="mainGrid">
+    <Grid Name="mainGrid" Background="Black">
 
     </Grid>
 </Window>
