@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,6 @@ namespace Calculator
         static List<string> inputList = new List<string>();
         static TextBlock outputScreen = new TextBlock
         {
-            Text = "0",
             FontSize = 70,
             HorizontalAlignment = HorizontalAlignment.Right,
             Foreground = Brushes.White
@@ -117,6 +117,7 @@ namespace Calculator
                 else if (button.Content.ToString() == "AC")
                 {
                     inputList.Clear();
+                    outputScreen.Text = null;
                 }
                 else if (button.Content.ToString() == "Exit")
                 {
@@ -221,15 +222,15 @@ namespace Calculator
                 if (numbers[i].Contains('-'))
                 {
                     var temp = numbers[i].Split('-');
-                    listOfNumbers.Add(Convert.ToDouble(temp[0]));
+                    listOfNumbers.Add(double.Parse(temp[0], CultureInfo.InvariantCulture));
                     for (int j = 0; j < temp.Length - 1; j++)
                     {
-                        listOfNumbers.Add(Convert.ToDouble(temp[j + 1]) * (-1));
+                        listOfNumbers.Add(double.Parse(temp[j + 1], CultureInfo.InvariantCulture) * (-1));
                     }
                 }
                 else
                 {
-                    listOfNumbers.Add(Convert.ToDouble(numbers[i]));
+                    listOfNumbers.Add(double.Parse(numbers[i], CultureInfo.InvariantCulture));
                 }
             }
             return listOfNumbers;
