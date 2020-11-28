@@ -42,11 +42,11 @@ namespace Calculator
             Foreground = Brushes.White
         };
 
-        static Viewbox testar = new Viewbox
+        static Viewbox inputView = new Viewbox
         {
             HorizontalAlignment = HorizontalAlignment.Left
         };
-        static Viewbox testar2 = new Viewbox
+        static Viewbox outputView = new Viewbox
         {
             HorizontalAlignment = HorizontalAlignment.Right
         };
@@ -64,18 +64,18 @@ namespace Calculator
                 mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
 
             }
-            mainGrid.Children.Add(testar);
-            mainGrid.Children.Add(testar2);
+            mainGrid.Children.Add(inputView);
+            mainGrid.Children.Add(outputView);
 
-            testar.Child = inputScreen;
-            testar2.Child = outputScreen;
+            inputView.Child = inputScreen;
+            outputView.Child = outputScreen;
 
-            testar.SetValue(Grid.RowProperty, 0);
-            testar2.SetValue(Grid.RowProperty, 1);
-            testar.SetValue(Grid.ColumnProperty, 0);
-            testar.SetValue(Grid.ColumnSpanProperty, 5);
-            testar2.SetValue(Grid.ColumnProperty, 0);
-            testar2.SetValue(Grid.ColumnSpanProperty, 5);
+            inputView.SetValue(Grid.RowProperty, 0);
+            outputView.SetValue(Grid.RowProperty, 1);
+            inputView.SetValue(Grid.ColumnProperty, 0);
+            inputView.SetValue(Grid.ColumnSpanProperty, 5);
+            outputView.SetValue(Grid.ColumnProperty, 0);
+            outputView.SetValue(Grid.ColumnSpanProperty, 5);
 
             string[,] buttonContent = new string[,]
             {
