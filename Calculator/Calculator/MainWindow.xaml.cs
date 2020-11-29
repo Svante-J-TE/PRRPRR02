@@ -55,11 +55,13 @@ namespace Calculator
         {
             InitializeComponent();
 
-            for (int i = 0; i < 7; i++)
+            int rowAmount = 7;
+            int columnAmount = 5;
+            for (int i = 0; i < rowAmount; i++)
             {
                 mainGrid.RowDefinitions.Add(new RowDefinition());
             }
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < columnAmount; i++)
             {
                 mainGrid.ColumnDefinitions.Add(new ColumnDefinition());
 
@@ -71,9 +73,9 @@ namespace Calculator
             outputView.Child = outputScreen;
 
             inputView.SetValue(Grid.RowProperty, 0);
-            outputView.SetValue(Grid.RowProperty, 1);
             inputView.SetValue(Grid.ColumnProperty, 0);
             inputView.SetValue(Grid.ColumnSpanProperty, 5);
+            outputView.SetValue(Grid.RowProperty, 1);
             outputView.SetValue(Grid.ColumnProperty, 0);
             outputView.SetValue(Grid.ColumnSpanProperty, 5);
 
@@ -125,7 +127,7 @@ namespace Calculator
                 }
                 else if (button.Content.ToString() == "EXE" && inputList.Any())
                 {
-                    testMethod();
+                    functionProcessing();
                 }
                 else if (mathOperatorList.Contains(button.Content.ToString()))
                 {
@@ -149,7 +151,6 @@ namespace Calculator
             }
 
         }
-
         public bool checkLength()
         {
             int length = inputList.Count - 1;
@@ -162,16 +163,7 @@ namespace Calculator
                 return true;
             }
         }
-
-
-
-
-        public static bool IsNumber(string num)
-        {
-            return num.All(char.IsDigit);
-        }
-
-        public void testMethod()
+        public void functionProcessing()
         {
             string function = "";
             for (int i = 0; i < inputList.Count; i++)
@@ -197,22 +189,18 @@ namespace Calculator
                         finalFunction.Add(listOfNumbers[i] + listOfNumbers[i + 1]);
                         break;
                     case "-":
-                        finalFunction.Add(listOfNumbers[i] + listOfNumbers[i + 1]);
                         //addition with a negative number results in subtraction
+                        finalFunction.Add(listOfNumbers[i] + listOfNumbers[i + 1]);
                         break;
                 }
             }
 
-
             //Final calculation
             
-            outputScreen.Text = Math.Round(calculate.addNumbers(finalFunction), 8).ToString();
+            outputScreen.Text = Math.Round(calculate.addNumbers(finalFunction), 8).ToString(); //problem is that numbers that already been multiplied is added or subtracted in next step
             finalFunction.Clear();
             inputList.Clear();
-
-            //problem is that numbers that already been multiplied is added or subtracted in next step
         }
-
         public List<double> getNumbers(string function)
         {
             var numbers = function.Split('+', 'X', '/');
