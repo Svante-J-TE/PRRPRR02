@@ -1,0 +1,13 @@
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\bin\Debug\netcoreapp3.1\Abstraktion.exe
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\bin\Debug\netcoreapp3.1\Abstraktion.deps.json
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\bin\Debug\netcoreapp3.1\Abstraktion.runtimeconfig.json
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\bin\Debug\netcoreapp3.1\Abstraktion.runtimeconfig.dev.json
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\bin\Debug\netcoreapp3.1\Abstraktion.dll
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\bin\Debug\netcoreapp3.1\Abstraktion.pdb
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.csprojAssemblyReference.cache
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.AssemblyInfoInputs.cache
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.AssemblyInfo.cs
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.dll
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.pdb
+D:\Documents\GitHub\PRRPRR02\Abstraktion\Abstraktion\obj\Debug\netcoreapp3.1\Abstraktion.genruntimeconfig.cache
