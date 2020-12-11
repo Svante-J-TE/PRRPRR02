@@ -67,12 +67,10 @@ namespace Petshop
         }
         private static void mainMenu()
         {
-            string userInput;
             Console.WriteLine("Welcome to the virtual petshop!\nWhat are you looking for?\n(1) - Animals\n(2) - Accessories");
             while (true)
             {
-                userInput = Console.ReadLine().ToString();
-                switch (userInput)
+                switch (Console.ReadLine())
                 {
                     case "1":
                         Console.WriteLine("You chose animals");
@@ -113,6 +111,36 @@ namespace Petshop
                     break;
             }
             Console.WriteLine($"Would you like to buy a/an {typeOfProduct}?\n(1) - Yes\n(2) - No");
+
+            while (true)
+            {
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        addProductToCart(typeOfProduct);
+                        break;
+                    case "2":
+                        mainMenu();
+                        break;
+                    default:
+                        Console.WriteLine("Choose a valid option!");
+                        break;
+                }
+            }
+        }
+
+        private static void addProductToCart(string typeOfProduct)
+        {
+            Console.WriteLine($"Please type the of the {typeOfProduct} you would like to buy!");
+            string userInput = Console.ReadLine();
+            foreach (var product in productsList)
+            {
+                if(product.name.ToLower() == userInput.ToLower())
+                {
+                    userCart.Add(product);
+                    Console.WriteLine($"{product.name} is now yours!");
+                }
+            }
         }
     }
 }
