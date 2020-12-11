@@ -67,26 +67,29 @@ namespace Petshop
         }
         private static void mainMenu()
         {
-            Console.WriteLine("Welcome to the virtual petshop!\nWhat are you looking for?\n(1) - Animals\n(2) - Accessories");
+            Console.WriteLine("Welcome to the virtual petshop!\nWhat are you looking for?\n(1) - Animals\n(2) - Accessories\n(3) - Leave the store");
             while (true)
             {
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Console.WriteLine("You chose animals");
+                        Console.WriteLine("\nYou chose animals\n");
                         showProducts("Animal");
                         break;
                     case "2":
-                        Console.WriteLine("You chose accessories");
+                        Console.WriteLine("\nYou chose accessories\n");
                         showProducts("Accessory");
                         break;
+                    case "3":
+                        Console.WriteLine("\nYou chose to leave the store\n");
+                        outDoorMenu();
+                        break;
                     default:
-                        Console.WriteLine("Choose a valid option!");
+                        Console.WriteLine("\nChoose a valid option!\n");
                         break;
                 }
             }
         }
-
         private static void showProducts(string typeOfProduct)
         {
             switch (typeOfProduct)
@@ -128,17 +131,47 @@ namespace Petshop
                 }
             }
         }
-
         private static void addProductToCart(string typeOfProduct)
         {
-            Console.WriteLine($"Please type the of the {typeOfProduct} you would like to buy!");
-            string userInput = Console.ReadLine();
-            foreach (var product in productsList)
+            Console.WriteLine($"Please type the name of the {typeOfProduct} you would like to buy! If you changed your mind just press (0)");
+            while (true)
             {
-                if(product.name.ToLower() == userInput.ToLower())
+                string userInput = Console.ReadLine();
+                foreach (var product in productsList)
                 {
-                    userCart.Add(product);
-                    Console.WriteLine($"{product.name} is now yours!");
+                    if (product.name.ToLower() == userInput.ToLower())
+                    {
+                        userCart.Add(product);
+                        Console.WriteLine($"{product.name} is now yours!");
+                    }
+                }
+                if(userInput == "0")
+                {
+                    mainMenu();
+                }
+                Console.WriteLine($"If you would like to buy another {typeOfProduct} just write its name, otherwise just press (0) return to the main menu");
+            }
+        }
+        private static void outDoorMenu()
+        {
+            if (userCart.Count == 0)
+            {
+                Console.WriteLine("Since you left the store without any products you carried on with your life as usual");
+            }
+            else
+            {
+                Console.WriteLine("What animal or accessory would you like to play with/use?");
+                foreach (var product in userCart)
+                {
+                    
+                    if (product is Animal tempAnimal)
+                    {
+                        Console.WriteLine($"{product.name} ({tempAnimal.species})");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{product.name}");
+                    }
                 }
             }
         }
