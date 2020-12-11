@@ -163,7 +163,6 @@ namespace Petshop
                 Console.WriteLine("What animal or accessory would you like to play with/use?");
                 foreach (var product in userCart)
                 {
-                    
                     if (product is Animal tempAnimal)
                     {
                         Console.WriteLine($"{product.name} ({tempAnimal.species})");
@@ -173,6 +172,13 @@ namespace Petshop
                         Console.WriteLine($"{product.name}");
                     }
                 }
+                /*
+                switch (Console.ReadLine())
+                {
+                    case $"{userCart}":
+                    default:
+                        break;
+                }*/
             }
         }
     }
