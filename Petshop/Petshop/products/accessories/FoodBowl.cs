@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Petshop.products.accessories
 {
-    class FoodBowl : Accessories
+    class FoodBowl : Accessory
     {
         public override void use()
         {

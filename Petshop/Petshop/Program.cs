@@ -36,21 +36,27 @@ namespace Petshop
 
             var dogBowl = new FoodBowl
             {
-                name = "dogBowl",
+                name = "Food bowl for dogs",
                 price = 50,
-                color = "Metallic Grey"
+                color = "Metallic Grey",
+                brandName = "AnimalsBFF",
+                animalType = "Dogs"
             };
             var birdBowl = new FoodBowl
             {
-                name = "birdBowl",
+                name = "Food bowl for birds",
                 price = 25,
-                color = "Metallic Grey"
+                color = "Metallic Grey",
+                brandName = "AnimalsBFF",
+                animalType = "Birds"
             };
             var snakeBowl = new FoodBowl
             {
-                name = "snakeBowl",
+                name = "Food bowl for snakes",
                 price = 25,
-                color = "Metallic Grey"
+                color = "Metallic Grey",
+                brandName = "AnimalsBFF",
+                animalType = "Snakes"
             };
             productsList.AddRange(new Products[] { dalmatian, cockatoo, anaconda, dogBowl, birdBowl, snakeBowl });
 
@@ -70,11 +76,11 @@ namespace Petshop
                 {
                     case "1":
                         Console.WriteLine("You chose animals");
-                        showProducts("animal");
+                        showProducts("Animal");
                         break;
                     case "2":
                         Console.WriteLine("You chose accessories");
-                        showProducts("accessory");
+                        showProducts("Accessory");
                         break;
                     default:
                         Console.WriteLine("Choose a valid option!");
@@ -85,7 +91,28 @@ namespace Petshop
 
         private static void showProducts(string typeOfProduct)
         {
-            //visa produkter beroende på typeOfProduct
+            switch (typeOfProduct)
+            {
+                case "Animal":
+                    foreach (var product in productsList)
+                    {
+                        if (product is Animal productToShow)
+                        {
+                            Console.WriteLine($"Name: {productToShow.name}\nSpecies: {productToShow.species}\nColor: {productToShow.color}\nNumber of limbs: {productToShow.numberOfLimbs}\nPrice: {productToShow.price}kr\n");
+                        }
+                    }
+                    break;
+                case "Accessory":
+                    foreach (var product in productsList)
+                    {
+                        if (product is Accessory productToShow)
+                        {
+                            Console.WriteLine($"Name: {productToShow.name}\nBrand: {productToShow.brandName}\nColor: {productToShow.color}\nSpecifically for: {productToShow.animalType}\nPrice: {productToShow.price}kr\n");
+                        }
+                    }
+                    break;
+            }
+            Console.WriteLine($"Would you like to buy a/an {typeOfProduct}?\n(1) - Yes\n(2) - No");
         }
     }
 }
