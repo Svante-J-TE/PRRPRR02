@@ -133,6 +133,8 @@ namespace Petshop
         }
         private static void addProductToCart(string typeOfProduct)
         {
+            int cart = userCart.Count;
+            int newCart = userCart.Count;
             Console.WriteLine($"Please type the name of the {typeOfProduct} you would like to buy! If you changed your mind just press (0)");
             while (true)
             {
@@ -142,12 +144,21 @@ namespace Petshop
                     if (product.name.ToLower() == userInput.ToLower())
                     {
                         userCart.Add(product);
+                        newCart = newCart + 1;
                         Console.WriteLine($"{product.name} is now yours!");
                     }
                 }
-                if(userInput == "0")
+                if (userInput == "0")
                 {
                     mainMenu();
+                }
+                else if(cart == newCart)
+                {
+                    Console.WriteLine("Choose a valid option");
+                }
+                else
+                {
+                    cart = newCart;
                 }
                 Console.WriteLine($"If you would like to buy another {typeOfProduct} just write its name, otherwise just press (0) return to the main menu");
             }
@@ -161,25 +172,38 @@ namespace Petshop
             else
             {
                 Console.WriteLine("What animal or accessory would you like to play with/use?");
-                foreach (var product in userCart)
+                while (true)
                 {
-                    if (product is Animal tempAnimal)
+                    foreach (var product in userCart)
                     {
-                        Console.WriteLine($"{product.name} ({tempAnimal.species})");
+                        if (product is Animal tempAnimal)
+                        {
+                            Console.WriteLine($"{tempAnimal.name} ({tempAnimal.species})");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{product.name}");
+                        }
                     }
-                    else
+                    string userInput = Console.ReadLine();
+                    foreach (var product in userCart)
                     {
-                        Console.WriteLine($"{product.name}");
+                        if(userInput.ToLower() == product.name.ToLower())
+                        {
+                            useProduct(userInput);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Type the name of something you own");
+                        }
                     }
                 }
-                /*
-                switch (Console.ReadLine())
-                {
-                    case $"{userCart}":
-                    default:
-                        break;
-                }*/
             }
+        }
+
+        private static void useProduct(string productToUse)
+        {
+            Console.WriteLine("success");
         }
     }
 }
