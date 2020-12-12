@@ -58,7 +58,7 @@ namespace Petshop
                 brandName = "AnimalsBFF",
                 animalType = "Snakes"
             };
-            productsList.AddRange(new Products[] { dalmatian, cockatoo, anaconda, dogBowl, birdBowl, snakeBowl });
+            productsList.AddRange(new Products[] { dalmatian, cockatoo, anaconda, dogBowl, birdBowl, snakeBowl });//products added to the shops inventory
 
             while (true)
             {
@@ -91,7 +91,7 @@ namespace Petshop
             }
         }
         private static void showProducts(string typeOfProduct)
-        {
+        {   //depending on what type of product you want to see, different products show up
             switch (typeOfProduct)
             {
                 case "Animal":
@@ -133,7 +133,7 @@ namespace Petshop
         }
         private static void addProductToCart(string typeOfProduct)
         {
-            int cart = userCart.Count;
+            int cart = userCart.Count;  //cart and newCart is used to check if you correctly spelled a products name. If you didnt it will tell you
             int newCart = userCart.Count;
             Console.WriteLine($"Please type the name of the {typeOfProduct} you would like to buy! If you changed your mind just press (0)");
             while (true)
@@ -186,7 +186,7 @@ namespace Petshop
                         }
                     }
                     string userInput = Console.ReadLine();
-                    foreach (var product in userCart)
+                    foreach (var product in userCart)   //to check if user input corresponds with any of the names of the products that you bought
                     {
                         if (userInput.ToLower() == product.name.ToLower())
                         {
