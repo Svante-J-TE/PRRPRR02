@@ -11,7 +11,7 @@ namespace Petshop
         public string species { get; set; }
 
         //METHODS
-        public abstract void Breathe();
+        public abstract void Play();
 
         public abstract void Rest();
 

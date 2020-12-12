@@ -152,7 +152,7 @@ namespace Petshop
                 {
                     mainMenu();
                 }
-                else if(cart == newCart)
+                else if (cart == newCart)
                 {
                     Console.WriteLine("Choose a valid option");
                 }
@@ -188,9 +188,9 @@ namespace Petshop
                     string userInput = Console.ReadLine();
                     foreach (var product in userCart)
                     {
-                        if(userInput.ToLower() == product.name.ToLower())
+                        if (userInput.ToLower() == product.name.ToLower())
                         {
-                            useProduct(userInput);
+                            useProduct(product.name);
                         }
                         else
                         {
@@ -203,7 +203,71 @@ namespace Petshop
 
         private static void useProduct(string productToUse)
         {
-            Console.WriteLine("success");
+            foreach (var product in userCart)
+            {
+                if (product.name == productToUse)
+                {
+                    if (product is Animal animal)
+                    {
+                        chooseMethodProduct(animal);
+                    }
+                    else if (product is Accessory accessory)
+                    {
+                        chooseMethodProduct(accessory);
+                    }
+                }
+            }
+        }
+
+        private static void chooseMethodProduct(Products product)
+        {
+            while (true)
+            {
+                if (product is Animal animal)
+                {
+                    Console.WriteLine("Choose what you want to do!\n(1) - Play\n(2) - Feed\n(3) - Put to bed\n(4) - Go back");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            animal.Play();
+                            break;
+                        case "2":
+                            animal.Eat();
+                            break;
+                        case "3":
+                            animal.Rest();
+                            break;
+                        case "4":
+                            mainMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Choose a valid option");
+                            break;
+                    }
+                }
+                else if (product is Accessory accessory)
+                {
+                    Console.WriteLine("Choose what you want to do!\n(1) - Use\n(2) - Clean\n(3) - Fix\n(4) - Go back");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            accessory.Use();
+                            break;
+                        case "2":
+                            accessory.Clean();
+                            break;
+                        case "3":
+                            accessory.Fix();
+                            break;
+                        case "4":
+                            outDoorMenu();
+                            break;
+                        default:
+                            Console.WriteLine("Choose a valid option");
+                            break;
+                    }
+                }
+            }
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Petshop
         public string animalType { get; set; }
 
         //METHODS
-        public abstract void use();
+        public abstract void Use();
+        public abstract void Clean();
+        public abstract void Fix();
     }
 }

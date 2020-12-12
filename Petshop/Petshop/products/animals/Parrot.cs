@@ -11,14 +11,14 @@ namespace Petshop.products.animals
             numberOfLimbs = 4;
         }
 
-        public override void Breathe()
+        public override void Play()
         {
-            Console.WriteLine("Inhale....Exhale");
+            Console.WriteLine("You sing a song togheter");
         }
 
         public override void Eat()
         {
-            Console.WriteLine("MMHMHMHMHMM");
+            Console.WriteLine("kwit kwit");
         }
 
         public override void Rest()
