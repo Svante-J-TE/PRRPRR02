@@ -1,0 +1,13 @@
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\bin\Debug\netcoreapp3.1\Komposition.exe
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\bin\Debug\netcoreapp3.1\Komposition.deps.json
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\bin\Debug\netcoreapp3.1\Komposition.runtimeconfig.json
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\bin\Debug\netcoreapp3.1\Komposition.runtimeconfig.dev.json
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\bin\Debug\netcoreapp3.1\Komposition.dll
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\bin\Debug\netcoreapp3.1\Komposition.pdb
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.csprojAssemblyReference.cache
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.AssemblyInfoInputs.cache
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.AssemblyInfo.cs
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.dll
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.pdb
+D:\Documents\GitHub\PRRPRR02\Komposition\Komposition\obj\Debug\netcoreapp3.1\Komposition.genruntimeconfig.cache
