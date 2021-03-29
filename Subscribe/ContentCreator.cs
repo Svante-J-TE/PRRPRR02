@@ -8,8 +8,6 @@ namespace Subscribe
     {
         List<PrivateProfile> subscribersList = new List<PrivateProfile>();
 
-        public int AmountOfSubscribers { get; set; } = 0;
-
         private string channelName;
 
         public string ChannelName
