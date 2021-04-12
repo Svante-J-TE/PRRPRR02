@@ -1,0 +1,13 @@
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.csprojAssemblyReference.cache
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.AssemblyInfoInputs.cache
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.AssemblyInfo.cs
+D:\Documents\GitHub\PRRPRR02\Subscribe\bin\Debug\netcoreapp3.1\Subscribe.exe
+D:\Documents\GitHub\PRRPRR02\Subscribe\bin\Debug\netcoreapp3.1\Subscribe.deps.json
+D:\Documents\GitHub\PRRPRR02\Subscribe\bin\Debug\netcoreapp3.1\Subscribe.runtimeconfig.json
+D:\Documents\GitHub\PRRPRR02\Subscribe\bin\Debug\netcoreapp3.1\Subscribe.runtimeconfig.dev.json
+D:\Documents\GitHub\PRRPRR02\Subscribe\bin\Debug\netcoreapp3.1\Subscribe.dll
+D:\Documents\GitHub\PRRPRR02\Subscribe\bin\Debug\netcoreapp3.1\Subscribe.pdb
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.dll
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.pdb
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.genruntimeconfig.cache
+D:\Documents\GitHub\PRRPRR02\Subscribe\obj\Debug\netcoreapp3.1\Subscribe.csproj.CoreCompileInputs.cache
