@@ -1,0 +1,17 @@
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\bin\Debug\multipleScenesTest.exe.config
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\bin\Debug\multipleScenesTest.exe
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\bin\Debug\multipleScenesTest.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.csprojAssemblyReference.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\MainWindow.g.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\App.g.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest_MarkupCompile.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest_MarkupCompile.lref
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\MainWindow.baml
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.g.resources
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.Properties.Resources.resources
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.csproj.GenerateResource.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.csproj.CoreCompileInputs.cache
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.exe
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\multipleScenesTest.pdb
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\UserControl1.g.cs
+C:\Users\svante.jonsson\Documents\GitHub\PRRPRR02\multipleScenesTest\obj\Debug\UserControl1.baml
